@@ -26,6 +26,8 @@ const translations: Record<Language, Dictionary> = {
       title: 'Tentang Saya',
       description1: 'Saya adalah seorang Web Developer yang memiliki passion dalam menciptakan antarmuka yang indah dan fungsional. Saya suka memadukan desain yang clean dengan kode yang efisien.',
       description2: 'Berbekal ketelitian, saya membangun website yang responsif dan user-friendly, fokus pada pengalaman pengguna yang luar biasa.',
+      visionTitle: 'Visi Saya',
+      visionDesc: 'Menciptakan pengalaman digital yang tidak hanya terlihat indah, tetapi juga memecahkan masalah nyata dengan cara yang elegan.',
     },
     skills: {
       title: 'Keahlian',
@@ -68,6 +70,8 @@ const translations: Record<Language, Dictionary> = {
       title: 'About Me',
       description1: 'I am a Web Developer with a passion for creating beautiful and functional interfaces. I love combining clean design with efficient code.',
       description2: 'Armed with attention to detail, I build responsive and user-friendly websites, focusing on an outstanding user experience.',
+      visionTitle: 'My Vision',
+      visionDesc: 'Creating digital experiences that are not only visually beautiful but also solve real problems in an elegant way.',
     },
     skills: {
       title: 'Skills',

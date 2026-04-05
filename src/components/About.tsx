@@ -37,9 +37,9 @@ const About: React.FC = () => {
             color: 'white',
             boxShadow: 'var(--shadow-md)'
           }}>
-            <h3 style={{ color: 'white', fontSize: '2rem', marginBottom: '1rem' }}>Visi Saya</h3>
+            <h3 style={{ color: 'white', fontSize: '2rem', marginBottom: '1rem' }}>{t('about', 'visionTitle')}</h3>
             <p style={{ fontStyle: 'italic', fontSize: '1.1rem', opacity: 0.9 }}>
-              "Menciptakan pengalaman digital yang tidak hanya terlihat indah, tetapi juga memecahkan masalah nyata dengan cara yang elegan."
+              "{t('about', 'visionDesc')}"
             </p>
           </div>
           {/* Decorative elements */}
