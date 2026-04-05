@@ -1,44 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext.js';
 import { useScrollAnimation } from '../hooks/useScrollAnimation.js';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
   const { ref, isVisible } = useScrollAnimation();
-  const [activeAccordion, setActiveAccordion] = useState<number | null>(0);
 
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: 'Sosial',
+      icon: '🌐',
       skills: [
-        { name: 'HTML & CSS (Vanilla, Modules)', level: 95 },
-        { name: 'JavaScript (ES6+)', level: 90 },
-        { name: 'React (Vite, Context, Hooks)', level: 85 },
-        { name: 'Responsive Design', level: 95 }
+        { name: 'Emotion', level: 75 },
+        { name: 'Friendly', level: 99 },
+        { name: 'Impact', level: 90 }
       ]
     },
     {
-      title: 'Backend Development',
+      title: 'Personality',
+      icon: '👤',
       skills: [
-        { name: 'PHP', level: 80 },
-        { name: 'Node.js / Express', level: 75 },
-        { name: 'MySQL / PostgreSQL', level: 80 }
-      ]
-    },
-    {
-      title: 'Language',
-      skills: [
-        { name: 'English', level: 85 },
-        { name: 'Indonesia', level: 100 },
-        { name: 'Arabic', level: 70 }
-      ]
-    },
-    {
-      title: 'Tools & Others',
-      skills: [
-        { name: 'Git & GitHub', level: 85 },
-        { name: 'Figma (UI/UX)', level: 70 },
-        { name: 'Vite', level: 85 }
+        { name: 'Wise', level: 90 },
+        { name: 'Manage money', level: 85 },
+        { name: 'Kindness', level: 50 }
       ]
     }
   ];
@@ -50,51 +34,49 @@ const Skills: React.FC = () => {
           {t('skills', 'title')}
         </h2>
 
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          maxWidth: '900px',
+          margin: '0 auto'
+        }}>
           {skillCategories.map((category, index) => (
             <div
               key={index}
               className={`glass hover-card animate-fade-in ${isVisible ? 'is-visible' : ''}`}
               style={{
-                marginBottom: '1rem',
-                overflow: 'hidden',
+                padding: '2.5rem 2rem',
                 transitionDelay: `${index * 0.1}s`
               }}
             >
-              <button
-                onClick={() => setActiveAccordion(activeAccordion === index ? null : index)}
-                style={{
-                  width: '100%',
+              {/* Card Header */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
+                <div style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '12px',
+                  background: 'rgba(10, 132, 255, 0.1)',
                   display: 'flex',
-                  justifyContent: 'space-between',
                   alignItems: 'center',
-                  padding: '1.5rem',
-                  background: activeAccordion === index ? 'rgba(255, 255, 255, 0.05)' : 'transparent',
-                  color: 'var(--color-primary)',
-                  fontSize: '1.25rem',
-                  fontWeight: '600'
-                }}
-              >
-                {category.title}
-                <span style={{
-                  transform: activeAccordion === index ? 'rotate(180deg)' : 'rotate(0)',
-                  transition: 'transform 0.3s'
+                  justifyContent: 'center',
+                  fontSize: '1.5rem',
+                  color: 'var(--color-primary)'
                 }}>
-                  ▼
-                </span>
-              </button>
+                  {category.icon}
+                </div>
+                <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', margin: 0 }}>
+                  {category.title}
+                </h3>
+              </div>
 
-              <div style={{
-                maxHeight: activeAccordion === index ? '500px' : '0',
-                opacity: activeAccordion === index ? 1 : 0,
-                transition: 'all 0.4s ease-in-out',
-                padding: activeAccordion === index ? '0 1.5rem 1.5rem' : '0 1.5rem'
-              }}>
+              {/* Skills List */}
+              <div>
                 {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} style={{ marginBottom: '1rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.3rem', fontSize: '0.9rem' }}>
+                  <div key={sIdx} style={{ marginBottom: '1.5rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontWeight: '500' }}>
                       <span>{skill.name}</span>
-                      <span>{skill.level}%</span>
+                      <span style={{ color: 'var(--color-text-light)' }}>{skill.level}%</span>
                     </div>
                     <div style={{
                       width: '100%',
@@ -104,11 +86,11 @@ const Skills: React.FC = () => {
                       overflow: 'hidden'
                     }}>
                       <div style={{
-                        width: isVisible && activeAccordion === index ? `${skill.level}%` : '0%',
+                        width: isVisible ? `${skill.level}%` : '0%',
                         height: '100%',
-                        background: 'linear-gradient(90deg, var(--color-primary), var(--color-primary-dark))',
+                        background: 'linear-gradient(90deg, var(--color-primary-dark), var(--color-primary))',
                         borderRadius: '4px',
-                        transition: 'width 1s ease-out 0.3s'
+                        transition: 'width 1.5s ease-out 0.3s'
                       }}></div>
                     </div>
                   </div>

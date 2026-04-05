@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext.js';
 import { useScrollAnimation } from '../hooks/useScrollAnimation.js';
-import heroImg from '../assets/wolf.jpg';
+import heroImg from '../assets/profil.jpeg';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
