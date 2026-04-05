@@ -9,6 +9,7 @@ import Projects from './components/Projects.js';
 import Certificates from './components/Certificates.js';
 import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
+import ScrollToTop from './components/ScrollToTop.js';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <LoadingScreen />
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
+        <ScrollToTop />
         <main style={{ flex: 1 }}>
           <Hero />
           <About />

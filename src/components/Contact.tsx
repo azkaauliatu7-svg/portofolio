@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                 </div>
               </a>
 
-              <a href="https://github.com/azka" target="_blank" rel="noreferrer" className="glass hover-card" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <a href="https://github.com/azkaauliatu7-svg" target="_blank" rel="noreferrer" className="glass hover-card" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <span style={{ fontSize: '1.5rem' }}>💻</span>
                 <div>
                   <div style={{ fontWeight: 'bold' }}>GitHub</div>
