@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
                 <span style={{ fontSize: '1.5rem' }}>📧</span>
                 <div>
                   <div style={{ fontWeight: 'bold' }}>Email</div>
-                  <div style={{ color: 'var(--color-text-light)' }}>azka@example.com</div>
+                  <div style={{ color: 'var(--color-text-light)' }}>azkaaulia7@gmail.com</div>
                 </div>
               </a>
 
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                 <span style={{ fontSize: '1.5rem' }}>📱</span>
                 <div>
                   <div style={{ fontWeight: 'bold' }}>WhatsApp</div>
-                  <div style={{ color: 'var(--color-text-light)' }}>+62 812 345 6789</div>
+                  <div style={{ color: 'var(--color-text-light)' }}>+62 8228 530 7930</div>
                 </div>
               </a>
 
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                 <span style={{ fontSize: '1.5rem' }}>💻</span>
                 <div>
                   <div style={{ fontWeight: 'bold' }}>GitHub</div>
-                  <div style={{ color: 'var(--color-text-light)' }}>github.com/azka</div>
+                  <div style={{ color: 'var(--color-text-light)' }}>github.com/azkaauliatu7-svg</div>
                 </div>
               </a>
             </div>

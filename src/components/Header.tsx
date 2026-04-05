@@ -33,7 +33,7 @@ const Header: React.FC = () => {
       boxShadow: isScrolled ? 'var(--shadow-sm)' : 'none'
     }}>
       <div style={{ fontWeight: '700', fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--color-text)' }}>
-        Azka.
+        Azka Aulia
       </div>
 
       {/* Desktop Menu */}
